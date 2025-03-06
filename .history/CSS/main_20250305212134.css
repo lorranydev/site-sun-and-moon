@@ -1,0 +1,142 @@
+/* Reset do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Suaviza a rolagem */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fontes */
+@font-face {
+    font-family: 'moonswing';
+    src: url('../fontes/moonswing.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'moonwalk';
+    src: url('../fontes/moonwalk.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'novamono';
+    src: url('../fontes/novamono.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Cores do tema */
+:root {
+    --preto: #0B070D;
+    --branco: #FDFCF7;
+    --cinza: #8C8C8C;
+    --roxo-escuro: #1C1126;
+    --roxo-cinza: #333333;
+    --amarelo: #ffa115;
+    --azul: #2811f8;
+}
+
+/* Estilo básico do corpo */
+body {
+    margin: 50px;
+    background-color: white !important;
+}
+
+/* Estilo do header */
+header {
+    background: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'novamono', sans-serif;
+}
+
+/* Logo do site */
+.logo_quadrado {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 125px;
+    height: 125px;
+    margin-right: 25px;
+}
+
+.nome_site {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+/* Navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+/* Itens do menu */
+nav ul li {
+    margin: 0 10px;
+    position: relative; /* Necessário para posicionamento do submenu */
+}
+
+/* Links do menu */
+nav ul li a {
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    font-family: 'novamono', sans-serif;
+    font-size: 25px;
+    color: var(--roxo-escuro);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Efeito ao passar o mouse */
+nav ul li a:hover {
+    background-color: var(--amarelo);
+    color: #fff;
+}
+
+/* Submenu */
+.submenu {
+    display: none; /* Inicia invisível */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    background-color: var(--branco);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Aparece ao passar o mouse */
+nav ul li:hover .submenu {
+    display: block;
+}
+
+/* Itens do submenu */
+.submenu li {
+    margin: 5px 0;
+}
+
+/* Links do submenu */
+.submenu li a {
+    font-size: 20px;
+    padding: 8px;
+    color: var(--roxo-escuro);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Efeito de hover no submenu */
+.submenu li a:hover {
+    background-color: var(--amarelo);
+    color: #fff;
+}

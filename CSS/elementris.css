@@ -1,0 +1,205 @@
+/* Reset do navegador*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* fontes */
+@font-face {
+    font-family: 'moonswing';
+    src: url('../fontes/moonswing.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'moonwalk';
+    src: url('../fontes/moonwalk.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'novamono';
+    src: url('../fontes/novamono.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'start';
+    src: url('../fontes/start.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --preto: #0B070D;
+    --branco: #FDFCF7;
+    --cinza: #8C8C8C;
+    --roxo-escuro: #1C1126;
+    --roxo-cinza: #333333;
+    --amarelo: #ffa115;
+    --azul: #2811f8;
+    --azul_claro: #83bdff;
+}
+
+
+main {
+    background-color: rgb(210, 238, 255);
+    display: flex;
+    padding: 60px 0px;
+    margin-bottom: 100px;
+    border-radius: 25px;
+}
+
+body {
+    background-color: var(--branco); /* Certifique-se de que o fundo do body também está branco */
+    overflow-x: hidden; /* Impede rolagem lateral */
+    overflow-y: auto; /* Permite rolagem vertical */
+    margin-top: 220px; /* Espaço suficiente para o header fixo */
+}
+
+
+
+.imagem_jogos{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px var(--preto);
+    margin-bottom: 20px;
+}
+
+.carrossel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto; 
+    overflow: hidden;
+}
+
+/* Galeria dentro do carrossel */
+.galeria {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+/* Imagens no carrossel */
+.galeria img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Controles de navegação */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    font-size: 30px;
+    color: var(--branco);
+    background-color: rgba(122, 191, 255, 0.5);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+
+}
+
+.carrossel:hover .prev,
+.carrossel:hover .next {
+    opacity: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(122, 191, 255, 0.8);
+    color: rgba(39, 50, 59, 0.8);
+    border-radius: 10px;
+}
+
+
+.info{
+    text-align: center;
+    margin-bottom: 40px; /* Espaço maior entre as seções */
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 4px 15px rgba(78, 44, 0, 0.5); /* Sombra suave */
+    max-width: 800px; /* Limita a largura da seção */
+    margin: 0 auto; /* Centraliza a seção */
+}
+
+.info h2{
+    font-size: 65px;
+    margin: 15px;   
+    color: var(--azul_claro);    
+}
+
+.info p{
+    font-size: 30px;
+    color: var(--branco);    
+
+}
+
+.preco{
+    color: var(--amarelo);
+    font-size: 32px;
+    font-family: 'novamono';
+    margin: 25px;
+}
+
+.comprar {
+    background: var(--branco);
+    color: var(--azul);
+    margin: 22px;
+    padding: 12px 24px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: none;
+    transition: 0.3s;
+    cursor: pointer;
+    font-family: 'start';
+
+}
+
+.comprar:hover {
+    background: var(--branco);
+    transform: scale(1.05);
+    color: var(--amarelo);
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.comprar {
+    animation: pulse 2s infinite;
+}
+
+header {
+    position: fixed; /* Fixa o header no topo */
+    top: 0; /* Fixa no topo da página */
+    left: 0; /* Alinha à esquerda */
+    width: 100%; /* Largura total da página */
+    padding: 10px 0; /* Espaçamento interno */
+    background: rgba(253, 252, 247, 0.8); /* Fundo branco com 80% de opacidade */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidade */
+    z-index: 10; /* Garante que o header fique acima do conteúdo */
+    border-bottom: 2px solid var(--cinza); /* Borda na parte inferior */
+}

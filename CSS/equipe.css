@@ -1,0 +1,168 @@
+/* fontes */
+@font-face {
+    font-family: 'novamono';
+    src: url('../fontes/novamono.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'start';
+    src: url('../fontes/start.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --preto: #0B070D;
+    --branco: #FDFCF7;
+    --cinza: #8C8C8C;
+    --roxo-escuro: #1C1126;
+    --roxo-cinza: #333333;
+    --amarelo: #ffa115;
+    --azul: #2811f8;
+    --azul_claro: #83bdff;
+}
+
+
+header {
+    position: fixed; /* Fixa o header no topo */
+    top: 0; /* Fixa no topo da página */
+    left: 0; /* Alinha à esquerda */
+    width: 100%; /* Largura total da página */
+    padding: 10px 0; /* Espaçamento interno */
+    background: rgba(253, 252, 247, 0.8); /* Fundo branco com 80% de opacidade */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidade */
+    z-index: 10; /* Garante que o header fique acima do conteúdo */
+    border-bottom: 2px solid var(--cinza); /* Borda na parte inferior */
+}
+
+body {
+    background-color: var(--branco); /* Certifique-se de que o fundo do body também está branco */
+    overflow-x: hidden; /* Impede rolagem lateral */
+    overflow-y: auto; /* Permite rolagem vertical */
+    margin-top: 220px; /* Espaço suficiente para o header fixo */
+}
+
+
+.equipe {
+    background-color: rgb(210, 255, 234);
+    display: flex;
+    padding: 60px 0px;
+    margin-bottom: 100px;
+    border-radius: 25px;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+img {
+    width: 250px; 
+    height: 250px; 
+}
+
+.sobre-nos {
+    background-color: rgb(210, 255, 234) !important;
+    text-align: center;
+    padding: 0px;
+    background-color: var(--branco);
+}
+
+h2 {
+    font-family: 'start';
+    font-size: 25px;
+    margin-bottom: 25px;
+    color: var(--amarelo);
+}
+h3{
+    
+    font-family: 'moonwalk';
+    text-align: center;
+    font-weight: lighter;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+.team {
+    display: flex;
+    justify-content: center;
+    gap: 500px;
+    flex-wrap: wrap; /* Permite que os itens se ajustem em telas menores */
+}
+
+.membro {
+    background-color: var(--amarelo);
+    border-radius: 10px;
+    padding: 20px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.membro img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.membro h3 {
+    font-size: 43px;
+    margin: 10px 0;
+    color: var(--roxo-escuro);
+}
+
+.membro p {
+    font-size: px; 
+    color: var(--roxo-escuro);
+    text-align: center;
+    line-height: 1.5;
+    margin: 10px 0; 
+    padding: 0 20px; 
+}
+
+
+.links a {
+    color: var(--azul);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 30px;   
+    font-family: 'moonwalk'; 
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.contato {
+    margin-top: 75px;
+    margin-bottom: 40px;
+    font-size: 30px; 
+    display: flex; 
+    justify-content: flex-start; 
+    align-items: center; 
+    gap: 15px; 
+    padding-left: 240px; 
+}
+
+.contato a {
+    color: var(--amarelo);
+    text-decoration: none;
+    font-size: 18px; 
+    font-family: 'start', sans-serif;
+}
+
+.contato a:hover {
+    text-decoration: underline;
+}
+
+
+
+.membro:hover {
+    transform: translateY(-10px);
+}
+
+em {
+    font-family: 'start', sans-serif;
+    font-style: normal;
+}

@@ -1,0 +1,118 @@
+/* Reset do navegador*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    background-color: wheat;
+    display: flex;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.produto{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.imagem_jogos{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.carrossel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto; 
+    overflow: hidden;
+}
+
+/* Galeria dentro do carrossel */
+.galeria {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+/* Imagens no carrossel */
+.galeria img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+/* Controles de navegação */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    font-size: 30px;
+    color: white;
+    background-color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.carrossel:hover .prev,
+.carrossel:hover .next {
+    opacity: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: black;
+}
+
+
+.info{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.info h2{
+    font-size: 60px;
+}
+
+.info p{
+    font-size: 30px;
+}
+
+.preco{
+    color: aquamarine;
+    font-size: 40px;
+}
+
+.comprar{
+    background-color: wheat;
+    color: black;
+    font-size: 30px;
+    border-radius: 6px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.comprar:hover{
+    background-color: #f0e68c;
+    cursor: pointer;
+}

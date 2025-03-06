@@ -1,0 +1,4 @@
+.equipe{
+    display: flex;
+    flex-direction: column;
+}

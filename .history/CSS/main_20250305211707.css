@@ -1,0 +1,232 @@
+/* Reset do navegador*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* suaviza a rolagem */
+html {
+    scroll-behavior: smooth;
+}
+
+/* fontes */
+@font-face {
+    font-family: 'moonswing';
+    src: url('../fontes/moonswing.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'moonwalk';
+    src: url('../fontes/moonwalk.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'novamono';
+    src: url('../fontes/novamono.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --preto: #0B070D;
+    --branco: #FDFCF7;
+    --cinza: #8C8C8C;
+    --roxo-escuro: #1C1126;
+    --roxo-cinza: #333333;
+    --amarelo: #ffa115;
+    --azul: #2811f8;
+}
+
+body{
+    margin: 50px;
+    background-color: white !important;
+}
+
+
+main {
+    font-family: 'moonswing', sans-serif;
+    background-color: var(--branco);
+}
+
+.nome_site{
+    font-family: 'novamono', sans-serif;
+    color: var(--preto);
+}
+header {
+    background: var(--branco);
+    display: flex;
+
+/*   border: 0px 0px 5px 0px #ffa115;
+    border-style: dashed;   */
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'novamono', sans-serif;
+    
+}
+
+/* Container da logo= */
+.logo_quadrado {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo em si */
+.logo {
+    width: 125px;
+    height: 125px;
+    margin-right: 25px;
+}
+
+.nome_site {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+/* cabeçalho */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+/* Estilo geral do menu */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Itens do menu */
+nav ul li {
+    margin: 0 10px;
+}
+
+/* Links do menu */
+nav ul li a {
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    font-family: 'novamono', sans-serif;
+    font-size: 25px;
+    color: var(--roxo-escuro); /* Defina a cor original aqui */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav
+
+/* Efeito ao passar o mouse */
+nav ul li a:hover {
+    background-color: var(--amarelo); 
+    color: #fff;
+}
+
+/* Efeito ao clicar no link (ativo) */
+nav ul li a:active {
+    background-color: var(--amarelo); 
+    color: var(--preto); 
+}
+
+
+h1{
+   font-family: 'novamono', sans-serif;
+   padding: 100px 50px 5px 50px;
+   color: var(--roxo-escuro);
+
+}
+
+p{
+    font-family: 'moonwalk', sans-serif;
+    font-size: 30px;
+    padding: 0px 250px;
+}
+
+#titulo1 {
+    padding: 180px 30px 5px 30px; 
+    
+}
+h2{
+    font-family: 'moonwalk', sans-serif;
+    text-decoration: none;
+    font-weight: normal;
+    padding: 3px;
+    font-size: 40px;
+    color: var(--roxo-escuro);
+    
+}
+/*  div - jogos em destaque */
+.jogos-destaque {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.jogo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 600px;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.jogo-texto {
+    flex: 1;
+    text-align: left;
+}
+
+.jogo img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.jogo img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    .jogo {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .jogo img {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+.bemvindo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alinha verticalmente */
+    margin-top: 85px;
+    margin-bottom: 85px;
+}
+
+.bemvindoesq {
+    font-family: 'moonwalk', sans-serif;
+    font-size: 30px;
+    text-align: left;
+    color: var(--roxo-escuro);
+    padding: 20px;
+}
+
+.bemvindodir {
+    font-family: 'moonwalk', sans-serif;
+    font-size: 30px;
+    text-align: right;
+    color: var(--roxo-escuro);
+    padding: 20px;
+}
+
